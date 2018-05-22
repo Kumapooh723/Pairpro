@@ -53,17 +53,17 @@ public class IntToEng {
     			if(n==39) eng=th+" "+a[9];
     		}
     		if(40<=n && n<=49) {
-    			String fr="forty";
-    			if(n==40) eng=fr;
-    			if(n==41) eng=fr+" "+a[1];
-    			if(n==42) eng=fr+" "+a[2];
-    			if(n==43) eng=fr+" "+a[3];
-    			if(n==44) eng=fr+" "+a[4];
-    			if(n==45) eng=fr+" "+a[5];
-    			if(n==46) eng=fr+" "+a[6];
-    			if(n==47) eng=fr+" "+a[7];
-    			if(n==48) eng=fr+" "+a[8];
-    			if(n==49) eng=fr+" "+a[9];
+    			String fo="forty";
+    			if(n==40) eng=fo;
+    			if(n==41) eng=fo+" "+a[1];
+    			if(n==42) eng=fo+" "+a[2];
+    			if(n==43) eng=fo+" "+a[3];
+    			if(n==44) eng=fo+" "+a[4];
+    			if(n==45) eng=fo+" "+a[5];
+    			if(n==46) eng=fo+" "+a[6];
+    			if(n==47) eng=fo+" "+a[7];
+    			if(n==48) eng=fo+" "+a[8];
+    			if(n==49) eng=fo+" "+a[9];
     		}
     		if(50<=n && n<=59) {
     			String fif="fifty";

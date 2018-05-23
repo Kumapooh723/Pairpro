@@ -6,13 +6,74 @@ public class IntToEng {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int input = sc.nextInt();
+		System.out.println("入力："+input);
 
-		System.out.println(translateEng(input));
+		System.out.println("出力："+translateEng(input));
 
 	}
 
 	// 数値を英訳する変換するメソッド
 	static String translateEng(int n) {
+		int length = String.valueOf(n).length();
+		String eng = null;
+		eng=two(n);
+		String[] a = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven",
+				"twelve" };
+		if (length == 3 && String.valueOf(n).matches("[1-9][0-9][0-9]")) {
+			String f=String.valueOf(n).substring(0,1);
+			int num=Integer.parseInt(f);
+			String e=f+"00";
+			eng = a[num] + " " + "hundred"+" "+"and"+" "+two(n-Integer.parseInt(e));
+			// ここを変えていけば100以上もできるはず
+
+		}
+
+		else
+			switch (n) {
+			case 0:
+				eng = a[0];
+				break;
+			case 1:
+				eng = a[1];
+				break;
+			case 2:
+				eng = a[2];
+				break;
+			case 3:
+				eng = a[3];
+				break;
+			case 4:
+				eng = a[4];
+				break;
+			case 5:
+				eng = a[5];
+				break;
+			case 6:
+				eng = a[6];
+				break;
+			case 7:
+				eng = a[7];
+				break;
+			case 8:
+				eng = a[8];
+				break;
+			case 9:
+				eng = a[9];
+				break;
+			case 10:
+				eng = a[10];
+				break;
+			case 11:
+				eng = a[11];
+				break;
+			case 12:
+				eng = a[12];
+				break;
+			}
+		return eng;
+	}
+	
+	static String two(int n) {
 		String eng = null;
 		String[] a = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven",
 				"twelve" };
@@ -100,57 +161,10 @@ public class IntToEng {
 					eng = b[8] + " " + a[m];
 
 			}
-
-		} else if (length == 3 && String.valueOf(n).matches("[1-9]00")) {
-			String f=String.valueOf(n).substring(0,1);
-			int num=Integer.parseInt(f);
-			eng = a[num] + " " + "hundred";// ここを変えていけば100以上もできるはず
-
 		}
-
-		else
-			switch (n) {
-			case 0:
-				eng = a[0];
-				break;
-			case 1:
-				eng = a[1];
-				break;
-			case 2:
-				eng = a[2];
-				break;
-			case 3:
-				eng = a[3];
-				break;
-			case 4:
-				eng = a[4];
-				break;
-			case 5:
-				eng = a[5];
-				break;
-			case 6:
-				eng = a[6];
-				break;
-			case 7:
-				eng = a[7];
-				break;
-			case 8:
-				eng = a[8];
-				break;
-			case 9:
-				eng = a[9];
-				break;
-			case 10:
-				eng = a[10];
-				break;
-			case 11:
-				eng = a[11];
-				break;
-			case 12:
-				eng = a[12];
-				break;
-			}
-		return eng;
+			return eng;
+		
+	
 	}
 
 }
